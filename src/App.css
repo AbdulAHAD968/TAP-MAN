@@ -1,0 +1,136 @@
+/* General App Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+}
+
+.dark-mode .App {
+  background: #222;
+  color: #f4f4f4;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.692);
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode button {
+  background-color: #444;
+}
+
+.dark-mode button:hover {
+  background-color: #666;
+}
+
+/* Image Uploader */
+.image-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 250px;
+  border-radius: 5px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+/* Video Preview */
+.video-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .App {
+    padding: 15px;
+    width: 100%;
+    max-width: none;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .image-preview {
+    max-height: 200px; 
+  }
+
+  video {
+    max-height: 200px;
+  }
+}
+
+/* Extra Small Devices (e.g., iPhone SE) */
+@media (max-width: 375px) {
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .image-preview {
+    max-height: 150px;
+  }
+
+  video {
+    max-height: 150px;
+  }
+}
